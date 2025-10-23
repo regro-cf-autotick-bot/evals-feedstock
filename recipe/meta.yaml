@@ -10,6 +10,8 @@ source:
   sha256: 9510c6cb76062a9d3a842698181c0a785fe57e174e61537734ef1d0c83d83428
 
 build:
+  script_env:
+   - OPENAI_API_KEY=NONE
   entry_points:
     - oaieval = evals.cli.oaieval:main
     - oaievalset = evals.cli.oaievalset:main
