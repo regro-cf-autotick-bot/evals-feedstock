@@ -1,5 +1,5 @@
 {% set name = "evals" %}
-{% set version = "1.0.3.post1" %}
+{% set version = "3.0.1" %}
 
 package:
   name: {{ name|lower }}
@@ -7,7 +7,7 @@ package:
 
 source:
   url: https://github.com/openai/evals/archive/refs/tags/{{ version }}.tar.gz
-  sha256: cc52bbe5b002c0ac7d70f0b1aabf35bdce3bcc2d25a6935ed42ce8918592302c
+  sha256: 9510c6cb76062a9d3a842698181c0a785fe57e174e61537734ef1d0c83d83428
 
 build:
   entry_points:
@@ -15,16 +15,39 @@ build:
     - oaievalset = evals.cli.oaievalset:main
   noarch: python
   script: {{ PYTHON }} -m pip install . -vv
-  number: 1
+  number: 0
 
 requirements:
   host:
     - python {{ python_min }}
     - pip
   run:
+    - aiolimiter
+    - anthropic
+    - beartype >=0.12.0
+    - chess
+    - dacite
+    - datasets
+    - docker-py
+    - evaluate
+    - flask
+    - google-generativeai
+    - gymnasium
+    - jiwer
+    - langchain
+    - networkx
+    - numexpr
+    - playwright
+    - pytest
+    - seaborn
+    - spacy-universal-sentence-encoder
+    - statsmodels
+    - types-pyyaml
+    - types-tqdm
+    - zstandard
     - python >={{ python_min }}
     - mypy
-    - openai >=0.27.2
+    - openai >=1.0.0
     - tiktoken
     - blobfile
     - backoff
