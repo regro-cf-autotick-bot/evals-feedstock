@@ -85,7 +85,7 @@ about:
   home: https://github.com/openai/evals
   summary: Evals is a framework for evaluating OpenAI models and an open-source registry of benchmarks.
   license: MIT
-  license_file: LICENSE
+  license_file: LICENSE.md
 
 extra:
   recipe-maintainers:
