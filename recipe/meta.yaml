@@ -75,6 +75,7 @@ requirements:
 test:
   imports:
     - evals
+  commands:
     - oaieval --help
     - oaievalset --help
   requires:
