@@ -1,5 +1,5 @@
 {% set name = "evals" %}
-{% set version = "3.0.1.post1" %}
+{% set version = "3.0.1" %}
 
 package:
   name: {{ name|lower }}
